@@ -1,0 +1,4 @@
+.env_local
+Pipfile
+Pipfile.lock
+.ipynb_checkpoints/

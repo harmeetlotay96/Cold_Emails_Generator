@@ -1,0 +1,8 @@
+ipykernel
+jupyterlab
+langchain-groq
+langchain-community
+streamlit
+chromadb
+python-dotenv
+langsmith
