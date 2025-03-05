@@ -1,4 +1,4 @@
-.env_local
+.env
 Pipfile
 Pipfile.lock
 .ipynb_checkpoints/

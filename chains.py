@@ -1,3 +1,10 @@
+"""
+Chain Module
+
+This module implements the language model chains for processing job postings
+and generating cold emails. It uses the Groq LLM API for text generation.
+"""
+
 import os
 from langchain_groq import ChatGroq
 from langchain_core.prompts import PromptTemplate
@@ -9,12 +16,30 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
-# Initialize LangSmith client
-client = Client()
+# Configure LangSmith
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
+os.environ["LANGCHAIN_PROJECT"] = "cold_email_generator"
+os.environ["LANGCHAIN_ENDPOINT"] = "https://api.smith.langchain.com"
+
+# Initialize LangSmith client with explicit API key
+client = Client(
+    api_url="https://api.smith.langchain.com",
+    api_key=os.getenv("LANGSMITH_API_KEY"),
+)
 
 class Chain:
+    """
+    Manages language model chains for job processing and email generation.
+    
+    This class handles:
+    - Job information extraction from postings
+    - Cold email generation based on job details and portfolio
+    """
+
     def __init__(self):
+        """
+        Initializes the Chain with a Groq LLM configuration.
+        """
         self.llm = ChatGroq(
                         model="llama-3.3-70b-versatile",
                         temperature=0,
@@ -24,6 +49,19 @@ class Chain:
     
     
     def extract_jobs(self, cleaned_text):
+        """
+        Extracts structured job information from cleaned job posting text.
+        
+        Args:
+            cleaned_text (str): Preprocessed job posting text
+            
+        Returns:
+            list: List of dictionaries containing job details with keys:
+                 'role', 'experience', 'skills', and 'description'
+                 
+        Raises:
+            OutputParserException: If content is too large to parse
+        """
         prompt_extract = PromptTemplate.from_template("""
                 I will give you scraped text from the job posting. 
                 Your job is to extract the job details & requirements in a JSON format containing the following keys: 'role', 'experience', 'skills', and 'description'. 
@@ -44,6 +82,16 @@ class Chain:
 
 
     def write_email(self, job_description, portfolio_urls):
+        """
+        Generates a personalized cold email based on job details and portfolio.
+        
+        Args:
+            job_description (dict): Extracted job details
+            portfolio_urls (list): Relevant portfolio project URLs
+            
+        Returns:
+            str: Generated cold email content
+        """
         prompt_email = PromptTemplate.from_template(
                 """
                 I will give you a role and a task that you have to perform in that specific role.
