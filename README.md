@@ -115,13 +115,13 @@ streamlit run main.py
 
 <div align="center">
   <p><strong>ProspectAI in Action: From Job Posting to Personalized Outreach</strong></p>
-  <img src="screenshots/1_landing.png" alt="Landing Page" width="800"/>
+  <img src="screenshots/before_search.png" alt="Landing Page" width="800"/>
   <p><em>Clean interface with clear instructions and example URL</em></p>
   
-  <img src="screenshots/2_job_analysis.png" alt="Job Analysis" width="800"/>
+  <img src="screenshots/mid_search.png" alt="Job Analysis" width="800"/>
   <p><em>Real-time job requirement extraction and skill matching</em></p>
   
-  <img src="screenshots/3_generated_email.png" alt="Generated Email" width="800"/>
+  <img src="screenshots/after_search.png" alt="Generated Email" width="800"/>
   <p><em>AI-generated personalized outreach with relevant portfolio links and copy functionality</em></p>
 </div>
 
