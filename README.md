@@ -110,3 +110,26 @@ streamlit run main.py
 - LangChain
 - ChromaDB
 - Groq LLM
+
+## 📸 Application Overview
+
+<div align="center">
+  <p><strong>ProspectAI in Action: From Job Posting to Personalized Outreach</strong></p>
+  <img src="screenshots/1_landing.png" alt="Landing Page" width="800"/>
+  <p><em>Clean interface with clear instructions and example URL</em></p>
+  
+  <img src="screenshots/2_job_analysis.png" alt="Job Analysis" width="800"/>
+  <p><em>Real-time job requirement extraction and skill matching</em></p>
+  
+  <img src="screenshots/3_generated_email.png" alt="Generated Email" width="800"/>
+  <p><em>AI-generated personalized outreach with relevant portfolio links and copy functionality</em></p>
+</div>
+
+The application features a dark-themed, professional interface that guides users through the entire process - from inputting a job posting URL to receiving a tailored outreach message. The intuitive design includes:
+
+- Clean, distraction-free input interface
+- Real-time processing indicators
+- Skill tag visualization
+- Expandable job details section
+- One-click email copying
+- Helpful sidebar with tips and instructions
