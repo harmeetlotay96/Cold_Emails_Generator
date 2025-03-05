@@ -10,7 +10,11 @@
 
 An AI-powered business development tool leveraging RAG (Retrieval Augmented Generation) to create personalized outreach messages by analyzing opportunities and intelligently matching them with relevant portfolio projects.
 
-[Features](#features) • [Installation](#installation) • [Usage](#usage) • [Architecture](#architecture)
+[🚀 Features](#-features) • 
+[🛠️ Installation](#️-installation) • 
+[💻 Usage](#-usage) • 
+[🏗️ Architecture](#️-architecture) • 
+[📸 Application Overview](#-application-overview)
 
 </div>
 
