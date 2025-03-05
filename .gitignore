@@ -1,4 +1,25 @@
+ Environment variables
 .env
+.env_local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VS Code
+.vscode/
+
+# ChromaDB
+vectorstore/
+vectorstore2/
+
+# Other
 Pipfile
 Pipfile.lock
-.ipynb_checkpoints/
