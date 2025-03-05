@@ -67,10 +67,10 @@ pip install -r requirements.txt
 
 3. Configure environment variables:
 ```bash
-# Create .env_local file and add your API keys
-cp .env.example .env_local
+# Create .env_ file and add your API keys
+touch .env
 
-# Add the following to .env_local:
+# Add the following to .env:
 GROQ_API_KEY=your_groq_api_key
 LANGSMITH_API_KEY=your_langsmith_api_key
 ```
